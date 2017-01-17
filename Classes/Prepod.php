@@ -1,41 +1,25 @@
 <?php
 
+require_once "Person.php";
 /**
- * Created by PhpStorm.
- * User: jenn
- * Date: 12.01.17
- * Time: 15:20
+ *Class Prepod
  */
 class Prepod extends Person
 {
-    public $quality;
-    public $discipline;
-    public $dolj;
-    public $kafedra;
-
+    protected $quality;
+    protected $discipline;
+    protected $dolj;
+    protected $kafedra;
 
     /**
      * Prepod constructor.
-     * @param string $quality
-     * @param int $discipline
-     * @param string $dolj
-     * @param $kafedra
      */
-    public function __construct($quality, $discipline, $dolj, $kafedra)
-    {
-        parent::__construct();
-        $this->quality = $quality;
-        $this->discipline;
-        $this->dolj;
-        $this->kafedra;
-    }
+    public function __construct($fio, $phone, $email, $quality, $discipline, $dolj, $kafedra){
+        parent::__construct($fio,$phone,$email);
+        echo $this->quality=$quality;
+        echo $this->discipline=$discipline;
+        echo $this->dolj=$dolj;
+        echo $this->kafedra=$kafedra;
+       }
 
-    public function display_info_prepod()
-    {
-        parent::display_info();
-        echo $this->quality;
-        echo $this->discipline;
-        echo $this->dolj;
-        echo $this->kafedra;
-    }
 }
