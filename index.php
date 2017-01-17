@@ -1,24 +1,37 @@
 <?php
-echo 'YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY';
 
-require 'Classes/Person.php';
+//function__autoload ($classname){
+//    $filename=__DIR__."/Classes/".$classname .".php";
+//    require ($filename);
+//}
+
 require ('Classes/Student.php');
 require ('Classes/Prepod.php');
-require ('Classes/group.php');
-require ('Classes/Interf.php');
+require ('Classes/Group.php');
+//require ('Classes/Interf.php');
 
-$stud=new Student();
-$stud->speciality = 'Кибернетика';
-$stud->facultet = 'Экономика';
-$stud->group='A45';
+echo "Новый студент ";
+echo "<br>";
+$stud=new Student("Иванов "," 2222222 "," user@mail "," Экономический ", " К-23 ", " Физика");
+echo "<br><br>";
+echo "Преподаватель  ";
+echo "<br>";
+$prep=new Prepod("Петрова "," 323232 "," petrova@mail "," К.т.н. ", " Физика ", " ассистент ", " Прикладніх наук");
+echo "<br><br>";
+echo "Группа  ";
+echo "<br>";
+$gropp=new Group("К-23 "," Международная экономика "," 1 курс");
+echo "<br>";
 
-$prep=new Prepod();
-$prep->discipline = 'Физика';
-echo $stud->display_info_stud();
-echo $prep->display_info_prepod();
+echo "<pre>";
+echo print_r ($stud);
+echo print_r ($prep);
+echo print_r($gropp);
+echo "</pre>";
+
 ?>
 
-
+r
 
 
 
